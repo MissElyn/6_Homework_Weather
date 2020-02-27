@@ -73,7 +73,7 @@ $(document).ready(function () {
             console.log("count2 result:", result)
         })
         $.ajax({
-            url: queryURL + city + "&units=imperial&appid=" + apiKey,
+            url: queryURL2 + city + "&units=imperial&appid=" + apiKey,
             method: "GET"
         }).then(function (result) {
             $(".Temp2").text(Math.round(result.list[16].main.temp));
@@ -85,7 +85,7 @@ $(document).ready(function () {
             console.log(result)
         })
         $.ajax({
-            url: queryURL + city + "&units=imperial&appid=" + apiKey,
+            url: queryURL2 + city + "&units=imperial&appid=" + apiKey,
             method: "GET"
         }).then(function (result) {
             $(".Temp3").text(Math.round(result.list[24].main.temp));
@@ -97,7 +97,7 @@ $(document).ready(function () {
             console.log(result)
         })
         $.ajax({
-            url: queryURL + city + "&units=imperial&appid=" + apiKey,
+            url: queryURL2 + city + "&units=imperial&appid=" + apiKey,
             method: "GET"
         }).then(function (result) {
             $(".Temp4").text(Math.round(result.list[32].main.temp));
@@ -109,13 +109,13 @@ $(document).ready(function () {
             console.log(result)
         })
         $.ajax({
-            url: queryURL + city + "&units=imperial&appid=" + apiKey,
+            url: queryURL2 + city + "&units=imperial&appid=" + apiKey,
             method: "GET"
         }).then(function (result) {
-            $(".Temp5").text(Math.round(result.list[40].main.temp));
-            $(".Sky5").text(result.list[40].weather[0].main);
-            $(".Humidity5").text(result.list[40].main.humidity);
-            $(".Wind5").text(Math.round((result.list[40].wind.speed) * 1.15078));
+            $(".Temp5").text(Math.round(result.list[39].main.temp));
+            $(".Sky5").text(result.list[39].weather[0].main);
+            $(".Humidity5").text(result.list[39].main.humidity);
+            $(".Wind5").text(Math.round((result.list[39].wind.speed) * 1.15078));
             $(".UV5").text()
 
             console.log(result)
