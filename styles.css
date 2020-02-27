@@ -1,0 +1,49 @@
+#current{ 
+    background-color:rgb(195, 214, 250);
+    text-align: center;
+}
+
+.curTemp{
+    font-size: x-large;
+    color: navy;
+    text-align: center;
+}
+
+#now {
+    font-size: larger;
+    color:navy; 
+    text-align: center;
+}
+.card-title {
+    background-color:rgb(168, 243, 220);
+    font-size: x-large;
+    color: navy;
+}
+
+#inside {
+font-size: medium;
+color:black;
+
+
+}
+.inline {
+    display: inline-block;
+    margin-right: 20px;
+}
+.card-title{
+    font-style: oblique;
+    font-size: inherit;
+    color: navy;
+    text-align: center;
+
+}
+
+#navbar{
+    background-color: black;
+}
+
+#navbar-brand{
+    font-size: xx-large;
+    font-weight: bold;
+    color: rgb(168, 243, 220);
+}
