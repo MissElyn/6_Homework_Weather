@@ -35,7 +35,7 @@ $("#date5").text(
 
 const searchBtn = $("searchBtn");
 const queryURL = "http://api.openweathermap.org/data/2.5/weather?q=";
-const queryURL2 = "https://pro.openweathermap.org/data/2.5/forcast?q=";
+const queryURL2 = "http://api.openweathermap.org/data/2.5/forecast?q=";
 const apiKey = "ddf031eb741448191855d74eeb2a8769";
 
 $(document).ready(function () {
@@ -63,22 +63,23 @@ $(document).ready(function () {
             url: queryURL2 + city + "&units=imperial&appid=" + apiKey,
             method: "GET"
         }).then(function (result) {
-            $(".Temp1").text(Math.round(result.main.temp));
-            $(".Sky1").text(result.weather[0].main);
-            $(".Humidity1").text(result.main.humidity);
-            $(".Wind1").text(Math.round((result.wind.speed) * 1.15078));
-            $(".UV1").text()
+             $(".Temp1").text(Math.round(result.list[8].main.temp));
+             $(".Sky1").text(result.list[8].weather[0].main);
+             $(".Humidity1").text(result.list[8].main.humidity);
+             $(".Wind1").text(Math.round((result.list[8].wind.speed) * 1.15078));
+            // $(".UV1").text()
 
-            console.log(result)
+            
+            console.log("count2 result:", result)
         })
         $.ajax({
             url: queryURL + city + "&units=imperial&appid=" + apiKey,
             method: "GET"
         }).then(function (result) {
-            $(".Temp2").text(Math.round(result.main.temp));
-            $(".Sky2").text(result.weather[0].main);
-            $(".Humidity2").text(result.main.humidity);
-            $(".Wind2").text(Math.round((result.wind.speed) * 1.15078));
+            $(".Temp2").text(Math.round(result.list[16].main.temp));
+            $(".Sky2").text(result.list[16].weather[0].main);
+            $(".Humidity2").text(result.list[16].main.humidity);
+            $(".Wind2").text(Math.round((result.list[16].wind.speed) * 1.15078));
             $(".UV2").text()
 
             console.log(result)
@@ -87,10 +88,10 @@ $(document).ready(function () {
             url: queryURL + city + "&units=imperial&appid=" + apiKey,
             method: "GET"
         }).then(function (result) {
-            $(".Temp3").text(Math.round(result.main.temp));
-            $(".Sky3").text(result.weather[0].main);
-            $(".Humidity3").text(result.main.humidity);
-            $(".Wind3").text(Math.round((result.wind.speed) * 1.15078));
+            $(".Temp3").text(Math.round(result.list[24].main.temp));
+            $(".Sky3").text(result.list[24].weather[0].main);
+            $(".Humidity3").text(result.list[24].main.humidity);
+            $(".Wind3").text(Math.round((result.list[24].wind.speed) * 1.15078));
             $(".UV3").text()
 
             console.log(result)
@@ -99,10 +100,10 @@ $(document).ready(function () {
             url: queryURL + city + "&units=imperial&appid=" + apiKey,
             method: "GET"
         }).then(function (result) {
-            $(".Temp4").text(Math.round(result.main.temp));
-            $(".Sky4").text(result.weather[0].main);
-            $(".Humidity4").text(result.main.humidity);
-            $(".Wind4").text(Math.round((result.wind.speed) * 1.15078));
+            $(".Temp4").text(Math.round(result.list[32].main.temp));
+            $(".Sky4").text(result.list[32].weather[0].main);
+            $(".Humidity4").text(result.list[32].main.humidity);
+            $(".Wind4").text(Math.round((result.list[32].wind.speed) * 1.15078));
             $(".UV4").text()
 
             console.log(result)
@@ -111,20 +112,15 @@ $(document).ready(function () {
             url: queryURL + city + "&units=imperial&appid=" + apiKey,
             method: "GET"
         }).then(function (result) {
-            $(".Temp5").text(Math.round(result.main.temp));
-            $(".Sky5").text(result.weather[0].main);
-            $(".Humidity5").text(result.main.humidity);
-            $(".Wind5").text(Math.round((result.wind.speed) * 1.15078));
+            $(".Temp5").text(Math.round(result.list[40].main.temp));
+            $(".Sky5").text(result.list[40].weather[0].main);
+            $(".Humidity5").text(result.list[40].main.humidity);
+            $(".Wind5").text(Math.round((result.list[40].wind.speed) * 1.15078));
             $(".UV5").text()
 
             console.log(result)
         })
 
     })
-    $.ajax({
-        url: queryURL2 + city + "&units=imperial&appid=" + apiKey,
-        method: "GET"
-    }).then(function (result) {
-        console.log(result)
-    })
+   
 })
